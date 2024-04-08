@@ -1,7 +1,6 @@
 const router = require("express").Router();
+const { getAllUsers } = require("../controllers/users.controller")
 
-router.get("/", (req, res) => {
-    res.status(200).json({ message: "all users return" })
-});
+router.get("/", getAllUsers)
 
 module.exports = router;

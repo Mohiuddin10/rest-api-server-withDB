@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require("cors");
-const usersRouter = require("./routes/users.route")
+const usersRouter = require("./routes/users.route");
+require("./config/db")
 
 const app = express();
 app.use(cors());
@@ -10,7 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
 // get users 
-app.use("/users", usersRouter)
+app.use("/api/users", usersRouter)
 
 app.get("/", (req, res) => {
     res.status(200).send("waoo app is running")
