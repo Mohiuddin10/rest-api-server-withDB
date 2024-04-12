@@ -32,3 +32,9 @@
 // 5. await newUser.save();
 // 6. res.status(201).json(newUser)
 // 7. in catch (error){ res.status(500).send(error.message)}
+
+
+
+
+// --------Get all users -------------------
+// 1. in controller variable getAllUsers async -> const users = await User.find(); -> res.send....
