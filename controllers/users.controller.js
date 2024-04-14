@@ -15,10 +15,12 @@ const getOneUser = (req, res) => {
 }
 
 const createUser = async (req, res) => {
+    const data = req.body.age;
+    console.log("data is: ", data);
     try {
         const newUser = new User({
             id: uuidv4(),
-            name: req.body.name,
+            name: req.body.userName,
             age: Number(req.body.age)
         })
         await newUser.save();
