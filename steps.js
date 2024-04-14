@@ -38,3 +38,12 @@
 
 // --------Get all users -------------------
 // 1. in controller variable getAllUsers async -> const users = await User.find(); -> res.send....
+
+// -----------------Get one user by ID---------
+// ===> in -> Controller 
+// 1. Use async await & try catch method 
+// 2. in try set a variable as user to findOne method 
+// example: const user = await User.findOne({ id: req.params.id}) and send the user.
+
+// ====> in router 
+// 1. set a route to get("/:id", getOneUser) 
